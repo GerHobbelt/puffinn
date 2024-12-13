@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/puffinn/puffinn.svg?branch=master)](https://travis-ci.com/puffinn/puffinn)
 
 # PUFFINN - Parameterless and Universal Fast FInding of Nearest Neighbors
+
 PUFFINN is an easily configurable library for finding the approximate nearest neighbors of arbitrary points.
 It also supports the identification of the closest pairs in the dataset.
 The only necessary parameters are the allowed space usage and the recall.
@@ -11,11 +12,13 @@ This means that the algorithm works for any similarity measure where a Locality 
 Currently Cosine similarity is supported using SimHash or cross-polytope LSH and Jaccard similarity is supported using MinHash.
 
 # Usage
+
 PUFFINN is implemented in C++ with Python bindings available. All features are available in both languages. 
 To get started quickly, see the below examples, as well as those in the /examples directory.
 More details are available in the [documentation](https://puffinn.readthedocs.io/en/latest/).
 
 ## C++
+
 PUFFINN is a header-only library. In most cases, including `puffinn.hpp` is sufficient.
 To use the library, use the `insert`, `rebuild`  and `search` methods on `puffinn::Index` as shown in the below example. 
 Note that points inserted after the last call to `rebuild` cannot be found.
@@ -46,6 +49,7 @@ int main() {
 ```
 
 ## Python
+
 To build the library locally using setuptools, run `python3 setup.py build`. 
 
 The API of the Python wrapper does not differ significantly from C++ API, except that arguments are passed slightly differently. The Python equivalent to the above example is shown below.
