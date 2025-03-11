@@ -46,3 +46,9 @@ PUFFINN.egg-info
 build
 dist
 .vscode
+.direnv
+.venv
+.cache/clangd/index
+.minibench.db
+compile_commands.json
+glove-100-angular.hdf5
